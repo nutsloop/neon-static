@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "neon-static"
-version = "1.0.0"
+version = "1.0.1"
 description = "Formal, static Sphinx theme with dark/light/system modes"
 readme = "README.md"
 license = "Apache-2.0"
@@ -36,24 +36,11 @@ Homepage = "https://github.com/nutsloop/neon-static"
 Documentation = "https://github.com/nutsloop/neon-static"
 
 [tool.hatch.build.targets.wheel]
-sources = {"src" = ""}
-only-include = [
-    "neon_static.py",
-    "theme.conf",
-    "layout.html",
-    "sidebar.html",
-    "theme-toggle.html",
-    "static",
-]
+sources = ["src"]
 
 [tool.hatch.build.targets.sdist]
 include = [
-    "src/neon_static.py",
-    "src/theme.conf",
-    "src/layout.html",
-    "src/sidebar.html",
-    "src/theme-toggle.html",
-    "src/static/**",
+    "src/neon_static/**",
     "README.md",
     "LICENSE",
 ]
